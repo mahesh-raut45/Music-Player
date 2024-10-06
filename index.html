@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+
+<body>
+
+    <div class="head" id="header">
+        <div id="toggle-theme">
+            <i class="toggle-theme-button fa-solid fa-toggle-on fa-2xl"></i>
+        </div>
+        <div id="music-player-name">
+            <h1>Music Player</h1>
+        </div>
+    </div>
+    <div class="container">
+        <!-- All Songs container -->
+        <div class="all-song-div inner-div">
+            <div class="filter-songs">
+                <label for="songs">Filter by Genre: </label>
+                <select name="songs" id="filter-song-byGenre"></select>
+            </div>
+            <div class="all-song-heading">
+                <h2>All Songs</h2>
+            </div>
+            <div class="filtered-songs-list"></div>
+            <div class="search-field">
+                <input type="search" name="searchSongs" id="searchSong" placeholder="Seach song name">
+
+                <button id="search-song-btn" type="button"> Search Song</button>
+            </div>
+            <div class="display-searched-song" id="display-searched-song">
+                <!-- <p class="filterd-songs text-white"></p> -->
+            </div>
+        </div>
+        <!-- Song Card Container-->
+        <div class="song-card-div inner-div">
+            <div class="current-song-details">
+                <div class="current-song-img">
+                    <img class="current-song-img" src="Images/ROCKSTAR.jpg" alt="song image">
+                </div>
+                <div class="current-song-artist">
+                    <h3 id="song-name" class="text-black">ROCKSTAR</h3>
+                    <p class="artist-name text-black">DaBaby ft. Roddy Ricch</p>
+                </div>
+            </div>
+            <div class="audio-player">
+                <audio id="audio" src="Songs/Blinding Lights.mp3"></audio>
+                <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+                <span id="currentTime" class="text-black">00:00</span> / <span id="duration"
+                    class="text-black">00:00</span>
+                <input type="range" id="progressBar" value="0" max="100">
+            </div>
+            <div class="addToPlaylist-prev-next-btns">
+                <div id="prev-song">
+                    <i class="fa-solid fa-backward-step fa-2xl"></i>
+                </div>
+                <div id="add-to-playlist">
+                    <button>Add to Playlist</button>
+                </div>
+                <div id="next-song">
+                    <i class="fa-solid fa-forward-step fa-2xl"></i>
+                </div>
+            </div>
+
+        </div>
+        <!-- Playlist Container -->
+        <div class="playlist-div inner-div">
+            <div class="create-playlist-div">
+                <input id="new-playlist-name" type="text" placeholder="Enter playlist name">
+                <button id="create-playlist" type="button">Create Playlist</button>
+            </div>
+            <div class="current-playlist">
+                <h2>Current Playlist</h2>
+            </div>
+            <div class="all-playlists">
+                <h2>All Playlists</h2>
+            </div>
+            <!-- <div class="search-field">
+                <input type="search" name="searchSongs" id="searchSong" placeholder="Seach song name">
+
+                <button id="search-song-btn" type="button"> Search Song</button>
+            </div>
+            <div class="display-searched-song" id="display-searched-song">
+               <p class="filterd-songs text-white"></p> 
+            </div> -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
